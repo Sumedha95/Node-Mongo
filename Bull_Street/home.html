@@ -6,6 +6,18 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>The Bull Street</title>
+  <script type="text/javascript">
+    function preventBack() { window.history.forward(); }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () { null };
+</script>
+<script>
+function pop(){
+  alert("Thank you for connecting with us. Team will reach out to you soon");
+}
+
+
+</script>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -26,12 +38,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Bocor - v2.0.0
-  * Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -43,17 +49,15 @@
 
       <div class="logo mr-auto">
         <h1 class="text-light"><a href="home.html">The Bull Street<span>.</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        
       </div>
 
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#header">Home</a></li>
-          <li><a href="#about">About Us</a></li>
+		  <li class="get-started"><a href="#about">Get Started</a></li>
+          <li class="active"><a href="#hero">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
           <li class="drop-down"><a href="">Category</a>
             <ul>
               <li><a href="#team1">Protection Solution</a></li>
@@ -63,18 +67,20 @@
               <li><a href="#team1">Others</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact Us</a></li>
-
-          <li class="get-started"><a href="#about">Get Started</a></li>
-		  
-		  <li><a href="index.html" method="get" >Log Out</a></li>
-        </ul>
+		  <li><a href="#portfolio">Portfolio</a></li>
+		  <li><a href="#about">About Us</a></li>
+		  <li><a href="#pricing">Feedback</a></li>
+		   <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact Us</a>
+		 <li> <a href="index.html" method="get" >Log Out</a></li>
+          
+		</ul>
       </nav><!-- .nav-menu -->
 
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
+  <!-- ======= Home Section ======= -->
   <section id="hero">
 
     <div class="container">
@@ -90,12 +96,10 @@
     </div>
     </div>
 
-  </section><!-- End Hero -->
+  </section><!-- End Home -->
 
   <main id="main">
 
-    <!-- ======= Clients Section ======= -->
-<!-- End Clients Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about section-bg">
@@ -105,22 +109,16 @@
           <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
           <div class="col-xl-7 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch">
             <div class="content d-flex flex-column justify-content-center">
-              <h3 data-aos="fade-in" data-aos-delay="100">The Bull Street   <font size=5>LLP</font></h3>
+              <h3 data-aos="fade-in" data-aos-delay="100">The Bull Street<font size=5>LLP</font></h3>
 			  
               <p data-aos="fade-in">
-               About us - The Bull Street is a value investing company. We are passionate about serving individuals, families & business owners to help them overcome their money stressors, make better financial decisions and live a financially organised life
+               About Us - THE BULL STREET is a startup company, started in the year 2017. The company is about finance and managing wealth.
               </p>
-              <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up">
-                  <i class="bx bx-receipt"></i>
-                  <h4><a href="#"><font sixe="45px">VENUGOPAL BS</font></a></h4>
-				  <p><strong>(Investment Sales Man)</strong></p>
-                    <p data-aos="fade-in" align="justify-content-center">
-					Venugopal as i'm fondly called as takes care of operations part of Bullstreet, i also did MBA in Finance and Markets, keenly observes the portfolios of clients and advises them on exit and entry in stocks so that their capital is safe guarded and returns are expected.</p>
-                </div>
-                
-             </div>
+             <p data-aos="fade-in">
+			  We are passionate about serving individuals, families and business owners to help them overcome their money stressors, make better financial decisions and live a financially organised life.
+              </p>
             </div><!-- End .content-->
+			 
           </div>
         </div>
       </div>
@@ -135,9 +133,7 @@
           </div>
 
         <div class="row">
-          
-          
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-right">
+         <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-right">
             <div class="card">
               <div class="card-img">
                 <img src="assets/img/3.jpg" alt="...">
@@ -164,117 +160,10 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Features Section ======= -->
-    <!-- End Features Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2 data-aos="fade-in">Portfolio</h2>
-          <p data-aos="fade-in">The Bull Street Company Inauguration Events</p>
-        </div>
-
-    <!--    <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div> -->
-
-        <div class="row portfolio-container" data-aos="fade-up">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                
-              </div>
-            <!--  <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-              </div> -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                
-              </div>
-            <!--  <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-              </div>-->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                
-              </div>
-            <!--  <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-              </div>-->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                
-              </div>
-           <!--   <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-              </div>-->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                
-              </div>
-            <!--  <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-              </div>-->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                
-              </div>
-            <!--  <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-              </div>-->
-            </div>
-          </div>
-
-       
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Team Section ======= -->
+    </section>
+	<!-- End Services Section -->
+	
+	    <!-- ======= category Section ======= -->
     <section id="team1" class="portfolio section-bg">
      <div class="container">
 
@@ -367,23 +256,284 @@
 
       </div> 
     </section>
-	
-	
-	
-	<!-- End Team Section -->
+<!-- End category Section -->
 
-    <!-- End Pricing Section -->
+ <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
+        <div class="section-title">
+          <h2 data-aos="fade-in">Portfolio</h2>
+          <p data-aos="fade-in">The Bull Street Company Inauguration Events</p>
+        </div>
+
+     
+        <div class="row portfolio-container" data-aos="fade-up">
+           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" ><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" ><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" ><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox"><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" ><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox"><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" ><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox"><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+              
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" ><i class="icofont-plus-circle"></i></a>
+                <a href="#" title="More Details"><i class="icofont-link"></i></a>
+              </div>
+              <div class="portfolio-info">
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+
+ <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-in">Feedback</h2>
+          <p data-aos="fade-in"></p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 box" data-aos="zoom-in">
+            <ul>
+			<p data-aos="fade-in" align="justify-content-center">
+              Bull Street ensured that I was able to articulate and achieve my financial goals.The team at Bullstreet embodies professionalism,empathy,friendship and trust. I thank them for all that they have done and continue to do for me. All awards and industry recognition they recieve are well deserved.
+              </p>
+			  <a href="" >-Padma shailendra</a>
+            </ul>
+            <a href="#" class="get-started-btn">Get Started</a>
+          </div>
+           <div class="col-lg-4 box featured" data-aos="zoom-in">
+		   <span class="featured-badge">Happy clients</span>
+             <ul>
+              <p data-aos="fade-in" align="justify-content-center">
+			   My relationship with Bullstreet began 2 years ago. They took a personal interest in managing my portfolio. While that has remained, I have been impressed by the caliber of the team he has built: young, knowledgeable and diligent. They put client's interest first.
+			  
+			  </p>
+			  <a href="" > -Dr. Anandh</a>
+            </ul>
+            <a href="#" class="get-started-btn">Get Started</a>
+          </div>
+
+          <div class="col-lg-4 box" data-aos="zoom-in">
+            <ul>
+              <p data-aos="fade-in" align="justify-content-center">
+			  I find their advice sound and I am happy to rely on them to ensure that I am financially secure! To be honest, there were occasions when I had some doubts and concerns, especially when markets swing downwards but the folks at bullstreet have provided more than adequate reassurances that they care for my financial health.
+			  </p>
+			  <a href="" >-Mr. Vijay Bhat</a>
+            </ul>
+            <a href="#" class="get-started-btn">Get Started</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+
+   <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-in">Frequently Asked Questions</h2>
+          <p data-aos="fade-in">Recent posts</p>
+        </div>
+		
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+          <div class="col-lg-5">
+		  <i class="bx bx-help-circle"></i>
+            <h4>Q: What is a demat account?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              While trading online, demat account is used to hold shares and securities in dematerialised/electronic format. Under dematerialisation, your share certificates are converted from physical form to electronic form so as to increase their accessibility. You need a Demat Account number to settle trades electronically.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-5">
+            <i class="bx bx-help-circle"></i>
+            <h4>Q:How long does it take to open a Demat account?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+             Usually, it takes about a week or two to open a Demat account. However, the period may extend to 15-20 days if the processing time is longer.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-5">
+            <i class="bx bx-help-circle"></i>
+            <h4>Q:Can we withdraw money from demat account?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+                No, you cannot withdraw your funds from a demat account. Demat account only stores your shares in an electronic form. If you have to withdraw the funds then it should be done from trading account.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-5">
+            <i class="bx bx-help-circle"></i>
+            <h4>Q:How long does it take to sell stock and get money?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              The Securities and Exchange Commission has specific rules concerning how long it takes for the sale of stock to become official and the funds made available. The current rules call for a three-day settlement, which means it will take at least three days from the time you sell stock until the money is available.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+	
     
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container">
-
         <div class="section-title">
           <h2 data-aos="fade-in">Contact</h2>
-          <p data-aos="fade-in">Please contact us for all inquiries and plans.</p>
+		 </div>
+    <section id="example" class="example section-bg">
+      <div class="container">
+        <div class="row">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-xl-7 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch">
+            <div class="content d-flex flex-column justify-content-center">			   
+			  <div class="row">
+                <div class="col-md-6 icon-box" data-aos="fade-up">
+                  <i class="bx bx-receipt"></i>
+                  <h4><a href="#"><font sixe="45px">VENUGOPAL BS</font></a></h4>
+				  <p><strong>(Investment Sales Man)</strong></p>
+                    <p data-aos="fade-in" align="justify-content-center">
+					Venugopal as i'm fondly called as takes care of operations part of Bullstreet, i also did MBA in Finance and Markets, keenly observes the portfolios of clients and advises them on exit and entry in stocks so that their capital is safe guarded and returns are expected.</p>
+                </div>
+                
+             </div>
+
+            </div><!-- End .content-->
+			 
+          </div>
+        </div>
+    </section><!-- End About Section -->
+		 
+		 
+		 
+         <center> <p data-aos="fade-in">Please contact us for all inquiries and plans.</p></center>
         </div>
 
         <div class="row">
@@ -417,7 +567,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up">
+            <form id="msg" action="/message" method="post" role="form" class="php-email-form" data-aos="fade-up">
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -437,14 +587,14 @@
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
-                <div class="loading">Loading</div>
+                <!--<div class="loading">Loading</div>-->
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" onclick="pop()">Send Message</button></div>
+                              
             </form>
           </div>
-
         </div>
 
       </div>

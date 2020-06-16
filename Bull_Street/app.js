@@ -1,98 +1,160 @@
-var express=require("express"); 
+var express = require("express");
+var bodyParser = require("body-parser");
+const mongoose = require('mongoose');
 
-var bodyParser=require("body-parser"); 
 
-  
+mongoose.connect('mongodb://localhost:27017/web1');
+var db = mongoose.connection;
+db.on('error', console.log.bind(console, "connection error"));
+db.once('open', function(callback) {
 
-const mongoose = require('mongoose'); 
+    console.log("connection succeeded");
+})
 
-mongoose.connect('mongodb://localhost:27017/web1'); 
-
-var db=mongoose.connection; 
-
-db.on('error', console.log.bind(console, "connection error")); 
-
-db.once('open', function(callback){ 
-
-    console.log("connection succeeded"); 
-}) 
-
-  
-
-var app=express() 
-
-  
-
-  
-app.use(bodyParser.json()); 
-
-app.use(express.static('./')); 
-app.use(bodyParser.urlencoded({ 
+var app = express()
+app.use(bodyParser.json());
+app.use(express.static('./'));
+app.use(bodyParser.urlencoded({
 
     extended: true
-})); 
+}));
 
-  
 
-app.post('/sign_up', function(req,res){ 
+//Sign Up
+app.post('/sign_up', function(req, res) {
+    var name = req.body.name;
+    var phone = req.body.phone;
+    var email = req.body.email;
+    var pass = req.body.pass;
+    var cpass = req.body.cpass;
 
-    var name = req.body.name; 
+    var data = {
 
-    var phone =req.body.phone;
+        "name": name,
+        "phone": phone,
 
-    var email =req.body.email; 
+        "email": email,
 
-    var pass = req.body.password; 
+        "password": pass,
+        "connpassword": cpass
 
-    var cpass =req.body.cpass; 
 
-  
 
-    var data = { 
+    }
 
-        "name": name, 
-        "phone":phone ,
+    db.collection('details').insertOne(data, function(err, collection) {
 
-        "email":email, 
+        if (err) throw err;
+        console.log("Record inserted Successfully");
 
-        "password":pass, 
-        "connpassword":cpass
+    });
+    return res.redirect('index.html');
+})
 
+
+//Log In
+app.get('/login', function(req, res, next) {
+    return res.render('index.html');
+
+});
+
+app.post('/login', function(req, res, next) {
+    db.collection('details').findOne({ name: req.body.name },
+        function(err, data) {
+            if (data) {
+                if (data.password == req.body.password) {
+                    // req.session.userId=data.unique_id;
+                    return res.redirect('home.html');
+                } else {
+
+                    res.send("Wrong password !");
+                    //res.redirect('index.html');
+
+
+
+
+                }
+            } else {
+                res.send("This Username is not registered");
+                //res.redirect('index.html');
+            }
+        });
+});
+
+//FOrgot Password
+app.post('/reset', function(req, res, next) {
+    var name = req.body.name;
+    var pass = req.body.pass;
+    var cpass = req.body.cpass; 
+    var username={"name":name}
+    var newpass = {
         
+            "password": pass,
+            "connpassword": cpass    
+             
+    }
+    db.collection('details').findOne({ name: req.body.name },
+        function(err, data) {
+            if (data) {
+    db.collection("details").updateOne(username,{$set:newpass}, function(err, res) {
+        if (err) throw err;
+        console.log("updated");
+        
+      });  
+      return res.redirect('index.html');
+    }
+    else
+    {
+        res.send("This Username is not registered");
+        //res.redirect('index.html');
+    }
+});
 
-    } 
+});
 
-db.collection('details').insertOne(data,function(err, collection){ 
 
-        if (err) throw err; 
 
-        console.log("Record inserted Successfully"); 
+//Message
 
-              
+app.post('/message', function(req, res) {
+    var name = req.body.name;
+    var email = req.body.email;
+    var sub = req.body.subject;
+    var msg = req.body.message;
 
-    }); 
+    var data = {
 
-          
+        "name": name,
+        "email": email,
+        "subject": sub,
+        "message": msg
 
-    return res.redirect('index.html'); 
-}) 
 
-  
 
-  
 
-app.get('/',function(req,res){ 
-res.set({ 
+    }
 
-    'Access-control-Allow-Origin': '*'
+    db.collection('message').insertmany(data, function(err, collection) {
 
-    }); 
+        if (err) throw err;
+        console.log("Record inserted Successfully");
+        //res.render({Success:"Thank you for Contacting with us team will reach out to you soon."}) 
 
-return res.redirect('index.html'); 
-}).listen(3000) 
+    });
+    //return res.redirect('home.html'); 
+})
 
-  
 
-  
 
-console.log("server listening at port 3000"); 
+
+app.get('/', function(req, res) {
+    res.set({
+
+        'Access-control-Allow-Origin': '*'
+
+    });
+
+    return res.redirect('index.html');
+}).listen(3000)
+
+console.log("server listening at port 3000");
