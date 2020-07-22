@@ -1,6 +1,6 @@
 #Instructions to Run the Project.
 1. Download the project
-2.Open cmd in **Bull_Street** folder
+2.Open cmd in **Finance Management** folder
 3.Run the below commands:
   ->npm install express --save
   ->npm install body-parser --save
